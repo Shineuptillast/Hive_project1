@@ -1,12 +1,12 @@
 ## Hive Project 
 
-Vehicle dataset:
+Vehicle Sales dataset:
 
 A short intro of the dataset-->
 
 The dataset contains the sales details of different Product types across different countries and regions:
 
-Schema :
+## Schema :
 * Order Number,
 * Quantity,
 * Price for each,
@@ -29,4 +29,4 @@ Schema :
 * Contact First Name,
 * Deal Size
 
-Valuable Insights About the Data-->
+##Valuable Insights
