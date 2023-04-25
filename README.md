@@ -8,7 +8,7 @@ The dataset contains the sales details of different Product types across differe
 
 Schema :
 *Order Number,
-- Quantity,
+* Quantity,
 -Price for each,
 -order line number,
 -Sales,
