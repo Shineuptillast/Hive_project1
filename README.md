@@ -7,8 +7,8 @@ A short intro of the dataset-->
 The dataset contains the sales details of different Product types across different countries and regions:
 
 Schema :
-###Order Number,
-###Quantity,
+## Order Number,
+## Quantity,
 
 Price for each,
 
