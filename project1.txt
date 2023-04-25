@@ -77,9 +77,70 @@ from vehicle_sales insert overwrite table vehicle_sales_orc select *;
 
 
 
+Creating an external table from the data stored in internal table in orc format.
+
+create external table vehicle_sales_orc_(
+ord_no int,
+quantity int,
+price_foreach float,
+prd_lno int,
+sales float,
+status string,
+qtr_id int,
+month int,
+year_id int,
+product_type string,
+msrp int,
+product_code string,
+phone string,
+city string,
+state string,
+postal_code string,
+country string,
+territory string,
+contact_lname string,
+contact_fname string,
+deal_size string
+)
+stored as orc
+location /user/practice_/;
+
+from vehicle_sales insert overwrite table vehicle_sales_orc_ select *;
 
 
+Valuable Insights:
 
+
+1) Total sales per country 
+
+select country, sum(sales) total_sales from vehicle_sales_orc_ group by country;
+
+
+2)
+
+3 Countries with the lowest overall sales
+
+select country, sum(sales) total_sales from vehicle_sales_orc_ group by country order by total_sales limit 3;
+
+3) Calculate total sales per year
+select year_id, sum(sales) total_sales from vehicle_sales_orc_ group by year_id;
+
+4) Total sales garner by each product line
+select product_type, sum(sales) from vehicle_sales_orc_ group by product_type;
+
+5)Total quantities per product type
+select product_type, sum(quantity) total_quantity from vehicle_sales_orc_ group  by product_type;
+
+6) Calculate total sales per quarter
+select qtr_id, sum(sales) total_sales from vehicle_sales_orc_ group by qtr_id;
+
+7) calculate quartery sales per country
+
+select country, qtr_id, sum(sales) total_sales from vehicle_sales_orc_ group by country, qtr_id;
+
+) find the product for which maximum orders were placed
+
+select product_type, sum(quantity) total_quantity from vehicle_sales_orc_ group  by product_type;
 
 
 
