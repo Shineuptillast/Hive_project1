@@ -30,3 +30,10 @@ The dataset contains the sales details of different Product types across differe
 * Deal Size
 
 ## Valuable Insights
+
+1) Total sales per country:
+![1st](https://user-images.githubusercontent.com/90482311/234948567-63c7228b-161a-4149-a370-6aabca702ed8.jpg)
+
+2) Countries with the lowest overall sales
+![2nd](https://user-images.githubusercontent.com/90482311/234948800-8ef58bd3-bde8-4d79-a36b-22f382d6f053.jpg)
+
