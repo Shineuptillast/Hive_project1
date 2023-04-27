@@ -2,9 +2,8 @@
 
 Vehicle Sales dataset:
 
-A short intro of the dataset-->
-
-The dataset contains the sales details of different Product types across different countries and regions:
+## Intro of Dataset
+Dataset comprises of sales details of different product lines, with the respective countries in which the different products have been bought from.
 
 ## Schema :
 * Order Number,
