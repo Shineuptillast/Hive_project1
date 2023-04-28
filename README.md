@@ -4,6 +4,7 @@ Vehicle Sales dataset:
 
 ## Intro of Dataset
 Dataset comprises of sales details of different product lines, with the respective countries in which the different products have been bought from.
+The analysis is carried out by storing the data in hadoop distributed file system, and than a structure is created over the file for the processing using hive.
 
 ## Schema :
 * Order Number,
