@@ -143,5 +143,7 @@ select country, qtr_id, sum(sales) total_sales from vehicle_sales_orc_ group by 
 select product_type, sum(quantity) total_quantity from vehicle_sales_orc_ group  by product_type having total_quanity = (select max(a.total_quantity) from (select product_type, sum(quantity) total_quantity from vehicle_sales_orc_ group  by product_type) a) b;
 
 
+9) In which country sales was maximum and in which country sales was minimum
 
 
+10) Find a month for each year in which maximum number of quantities were sold
