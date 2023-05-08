@@ -56,3 +56,9 @@ The analysis is carried out by storing the data in hadoop distributed file syste
 ## 8) find the product for which maximum orders were placed
 ![8th](https://user-images.githubusercontent.com/90482311/236898133-12c49bf3-705d-453d-8543-03c7a7448009.jpg)
 
+## 9) In which quarter the sales was minimum
+![9th](https://user-images.githubusercontent.com/90482311/236907892-4a0b46e3-aef8-4e37-9f85-f0c52252380c.jpg)
+
+## 10) In which month of every year the maximum sales are done
+![10th](https://user-images.githubusercontent.com/90482311/236907970-2078f1eb-154d-448e-8337-303f879692a5.jpg)
+
