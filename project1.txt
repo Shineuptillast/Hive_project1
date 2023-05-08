@@ -141,7 +141,9 @@ select country, qtr_id, sum(sales) total_sales from vehicle_sales_orc_ group by 
 8) find the product for which maximum orders were placed
 with sales_no as (select product_type, count(ord_no) total_orders from vehicle_sales_orc_ group by product_type), rank_cte as( select *, rank() over(order by total_orders desc) as rn from sales_no )
 select product_type from rank_cte where rn=1;
-9) In which country sales was maximum and in which country sales was minimum
+9)In which quarter the sales was minimum
 
+with qtr_sales as( select qtr_id, sum(sales) total_sales_perquarter from vehicle_sales_orc_ group by qtr_id) ,min_sales as (select *, rank() over(order by total_sales_perquarter asc) as lowest_sales from qtr_sales) select qtr_id from min_sales where lowest_sales =1;
 
-10) Find a month for each year in which maximum number of quantities were sold
+10) In which month of every year the maximum sales are done
+with sales as( select year_id, month, sum(sales) Total_sales_month from vehicle_sales_orc_ group by year_id, month) , max_sales_month as( select *, rank() over(partition by year_id order by Total_sales_month desc) as rn from sales) select year_id, month from max_sales_month where rn =1;
