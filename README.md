@@ -54,3 +54,4 @@ The analysis is carried out by storing the data in hadoop distributed file syste
 ![7th 2](https://user-images.githubusercontent.com/90482311/234949990-e7080496-6b29-4b18-a13d-06fefd92372c.jpg)
 
 ## 8) find the product for which maximum orders were placed
+![8th](https://user-images.githubusercontent.com/90482311/236898050-062e5c59-8a38-4426-99a5-6d357de67af0.jpg)
