@@ -147,3 +147,15 @@ with qtr_sales as( select qtr_id, sum(sales) total_sales_perquarter from vehicle
 
 10) In which month of every year the maximum sales are done
 with sales as( select year_id, month, sum(sales) Total_sales_month from vehicle_sales_orc_ group by year_id, month) , max_sales_month as( select *, rank() over(partition by year_id order by Total_sales_month desc) as rn from sales) select year_id, month from max_sales_month where rn =1;
+
+11) In which country sales was maximum and in which country sales was minimum
+WITH SALES AS ( SELECT COUNTRY,SUM(SALES) AS TOTAL_SALES FROM VEHICLE_SALES_ORC_ GROUP BY COUNTRY ),
+RNK AS (SELECT * , ROW_NUMBER() OVER(ORDER BY TOTAL_SALES DESC) RNK_HIGHEST , ROW_NUMBER() OVER(ORDER BY TOTAL_SALES ASC) AS RNK_LOWEST FROM SALES)
+SELECT COUNTRY ,TOTAL_SALES, (CASE WHEN RNK_HIGHEST THEN 'MAX SALES' ELSE 'MIN SALES' END )FROM RNK WHERE RNK_HIGHEST =1 OR RNK_LOWEST=1;
+
+
+
+
+
+
+
