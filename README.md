@@ -1,6 +1,8 @@
 ## Hive Project 
 
-Vehicle Sales dataset:
+## PROJECT ARCHITECTURE
+![image](https://github.com/Shineuptillast/Hive_project1/assets/90482311/c4861e8c-3f79-4c04-ba74-8d809c270efc)
+
 
 ## Intro of Dataset
 Dataset comprises of sales details of different product lines, with the respective countries in which the different products have been bought from.
